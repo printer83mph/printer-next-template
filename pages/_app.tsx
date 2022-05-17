@@ -1,8 +1,15 @@
-import '../globals.css'
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
+
+import '../globals.css'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Component {...pageProps} />
+  <>
+    <Head>
+      <link rel="shortcut icon" href="/favicon.ico" />
+    </Head>
+    <Component {...pageProps} />
+  </>
 )
 
 export default MyApp
